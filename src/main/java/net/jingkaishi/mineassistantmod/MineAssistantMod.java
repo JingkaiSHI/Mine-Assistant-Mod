@@ -1,5 +1,8 @@
 package net.jingkaishi.mineassistantmod;
 
+import net.jingkaishi.mineassistantmod.common.blocks.ModBlocks;
+import net.jingkaishi.mineassistantmod.common.items.ModItems;
+import net.jingkaishi.mineassistantmod.common.tileentities.ModTileEntities;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -35,6 +38,11 @@ public class MineAssistantMod
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+
+        // register the Blocks, items, and Creative tab
+        ModBlocks.register();
+        ModItems.register();
+        ModTileEntities.register();
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

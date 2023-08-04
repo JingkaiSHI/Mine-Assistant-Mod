@@ -11,4 +11,4 @@ IMPORTANT:
 This repo is still under dynamic change! The information held here should only be treated as temporary.
 
 Update Log:
-2023/8/2:
+2023/8/3: Set up deferred register for blocks, items, tile entity and creative tabs.
