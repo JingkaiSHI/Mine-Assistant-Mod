@@ -30,6 +30,12 @@ public class MineAssistantMod
     private static final Logger LOGGER = LogManager.getLogger();
 
     public MineAssistantMod() {
+
+        // register the Blocks, items, and Creative tab
+        ModBlocks.register();
+        ModItems.register();
+        ModTileEntities.register();
+
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -38,11 +44,6 @@ public class MineAssistantMod
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-
-        // register the Blocks, items, and Creative tab
-        ModBlocks.register();
-        ModItems.register();
-        ModTileEntities.register();
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
