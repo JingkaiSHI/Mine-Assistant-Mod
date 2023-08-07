@@ -13,3 +13,4 @@ This repo is still under dynamic change! The information held here should only b
 Update Log:
 2023/8/3: Set up deferred register for blocks, items, tile entity and creative tabs.
 2023/8/4: Add hologram base into the game, encountered bugs in the process.
+2023/8/7: added the base into the game, fixed previous mentioned bug, found more problems

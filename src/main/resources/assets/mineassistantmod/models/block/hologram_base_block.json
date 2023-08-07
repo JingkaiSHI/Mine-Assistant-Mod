@@ -1,0 +1,6 @@
+{
+  "parent": "cube/block_all",
+  "textures": {
+    "all": "mineassistantmod:block/hologram_base_block"
+  }
+}

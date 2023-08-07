@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 
 public class ModCreativeTabs {
-    public static final ItemGroup MOD_TAB = new ItemGroup(MineAssistantMod.MOD_ID) {
+    public static final ItemGroup MOD_TAB = new ItemGroup("mineassistanttab") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(Items.DIAMOND);

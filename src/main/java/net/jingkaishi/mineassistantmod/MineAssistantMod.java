@@ -34,7 +34,7 @@ public class MineAssistantMod
         // register the Blocks, items, and Creative tab
         ModBlocks.register();
         ModItems.register();
-        ModTileEntities.register();
+        // ModTileEntities.register();
 
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
