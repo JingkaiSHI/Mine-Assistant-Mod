@@ -16,9 +16,9 @@ import net.minecraftforge.common.ToolType;
 
 public class HologramBaseBlock extends Block {
 
-    public static final DirectionProperty FACING = HorizontalBlock.FACING;
 
-    public HologramBaseBlock() {
-        super(Properties.of(Material.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops());
+
+    public HologramBaseBlock(Properties properties) {
+        super(properties);
     }
 }
