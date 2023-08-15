@@ -1,6 +1,7 @@
 package net.jingkaishi.mineassistantmod;
 
 import net.jingkaishi.mineassistantmod.common.blocks.ModBlocks;
+import net.jingkaishi.mineassistantmod.common.container.ModContainer;
 import net.jingkaishi.mineassistantmod.common.items.ModItems;
 import net.jingkaishi.mineassistantmod.common.tileentities.ModTileEntities;
 import net.minecraft.block.Block;
@@ -38,6 +39,7 @@ public class MineAssistantMod
         ModBlocks.register();
         ModItems.register();
         ModTileEntities.register(eventBus);
+        ModContainer.register(eventBus);
 
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);

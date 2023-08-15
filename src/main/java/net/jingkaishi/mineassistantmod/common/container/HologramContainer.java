@@ -23,7 +23,7 @@ public class HologramContainer extends Container {
     private final IItemHandler playerInventory;
 
     public HologramContainer(int windowId, World world, BlockPos pos, PlayerInventory playerInventory, PlayerEntity player) {
-        super(type, windowId);
+        super(ModContainer.HOLOGRAM_CONTAINER.get(), windowId);
         this.tileEntity = world.getBlockEntity(pos);
         this.playerEntity = player;
         this.playerInventory = new InvWrapper(playerInventory);
