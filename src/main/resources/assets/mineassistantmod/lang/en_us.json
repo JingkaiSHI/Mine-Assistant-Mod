@@ -1,5 +1,6 @@
 {
   "itemGroup.mineassistanttab": "Mine Assistant",
 
-  "block.mineassistantmod.hologram_base_block": "Intelligence Hologram"
+  "block.mineassistantmod.hologram_base_block": "Intelligence Hologram",
+  "screen.mineassistantmod.hologram_base_block": "Hologram Initializer"
 }

@@ -3,9 +3,11 @@ package net.jingkaishi.mineassistantmod;
 import net.jingkaishi.mineassistantmod.common.blocks.ModBlocks;
 import net.jingkaishi.mineassistantmod.common.container.ModContainer;
 import net.jingkaishi.mineassistantmod.common.items.ModItems;
+import net.jingkaishi.mineassistantmod.common.screen.HologramScreen;
 import net.jingkaishi.mineassistantmod.common.tileentities.ModTileEntities;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -64,6 +66,8 @@ public class MineAssistantMod
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().options);
+        ScreenManager.register(ModContainer.HOLOGRAM_CONTAINER.get(),
+                HologramScreen::new);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
