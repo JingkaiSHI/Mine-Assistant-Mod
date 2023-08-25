@@ -63,6 +63,7 @@ public class HologramBaseBlock extends Block {
                 if(tileEntity instanceof HologramTileEntity){
                     INamedContainerProvider provider = createContainerProvider(worldIn, pos);
                     NetworkHooks.openGui(((ServerPlayerEntity) player), provider, tileEntity.getBlockPos());
+                    ((HologramTileEntity)tileEntity).onPromptReceived(player);
                 }else{
                     throw new IllegalStateException("our container provider is missing!");
                 }
@@ -70,7 +71,6 @@ public class HologramBaseBlock extends Block {
                 if(tileEntity instanceof HologramTileEntity){
                     EntityType.LIGHTNING_BOLT.spawn(((ServerWorld) worldIn), null, player,
                             pos, SpawnReason.TRIGGERED, true, true);
-                    ((HologramTileEntity)tileEntity).onPromptReceived();
                 }
             }
         }
